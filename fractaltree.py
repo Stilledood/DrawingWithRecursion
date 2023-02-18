@@ -1,7 +1,9 @@
 import turtle
 
 def tree(branch_length,t):
+
     if branch_length > 5:
+
         t.forward(branch_length)
         t.right(20)
         tree(branch_length-20,t)
@@ -9,10 +11,14 @@ def tree(branch_length,t):
         tree(branch_length - 20, t)
         t.right(20)
         t.backward(branch_length)
+    if branch_length < 20:
+        t.color('green')
+    else:
+        t.color('dark green')
 
 t = turtle.Turtle()
 my_win = turtle.Screen()
-t.color('red')
+t.color('dark green')
 t.left(90)
 t.up()
 t.backward(100)
